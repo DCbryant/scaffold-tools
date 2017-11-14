@@ -16,12 +16,14 @@ a boilerplate for fe architecture
 
 # file structure
 
+```bash
 |- src
 |- webpack
 |- |- app
 |- |- components
 |- |- global
 |- |- |- reset.css
+```
 
 babel原理：将我们的代码转化成AST-描述代码结构的树状结构。
 

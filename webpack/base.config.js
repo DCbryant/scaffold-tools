@@ -5,13 +5,13 @@ const entry = require('./entry')
 
 module.exports = {
     // 手动配置编译上下文
-    context:path.resolve(process.cwd(),'src/app'),
+    context:path.resolve(process.cwd(),'src'),
     entry:entry,
-    watch:true,
     output:{
         // node的启动目录
         path:path.resolve(process.cwd(),'dist'),
         filename: "[name].js",
+        publicPath: '/dist',
     },
     resolve: {
         extensions: [".js", ".jsx", ".json"],  
@@ -20,7 +20,8 @@ module.exports = {
         rules:[
             {
                 test:/\.js$/,
-                loader:'babel-loader'
+                loader:'babel-loader',
+                query: {compact: false}
             },
             {
                 test: /\.scss$/,
@@ -57,8 +58,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'base/webpack.template.html',
             inject: true,
+            title:'sale',
             // 指定引入哪个js
-            // chunks:['sale']
+            chunks:['sale','list'],
+            filename:'sale.html'
         }),
     ]
 }
+

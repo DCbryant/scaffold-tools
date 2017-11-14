@@ -1,6 +1,6 @@
 {
     "presets": [
-        "stage-0",
+        "stage-0",//一大堆plugins
         "env",
         "react"
     ]

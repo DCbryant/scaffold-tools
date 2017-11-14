@@ -1,4 +1,6 @@
 import './sale.less'
-let a = '233'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-console.log(a)
+const node = document.getElementById('root')
+ReactDOM.render('dcbryant',node)
