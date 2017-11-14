@@ -55,6 +55,7 @@ module.exports = {
     },
     plugins:[
         new ExtractTextPlugin("css/[name].css"),
+        // 若想有多个html可以再加一个new HtmlWebpackPlugin()
         new HtmlWebpackPlugin({
             template: 'base/webpack.template.html',
             inject: true,
